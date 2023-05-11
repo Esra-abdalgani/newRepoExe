@@ -28,7 +28,6 @@ jobs:
       - name: upload artifact 
         uses: actions/upload-artifact@v3
         with:
-          name: dist-files
           path: |
             dist
             package.json
@@ -39,8 +38,6 @@ jobs:
     steps:
       - name: download Artifact 
         uses: actions/download-artifact@v3 
-        with:
-          name: my-artifact 
       - name: display artifacts 
         run: ls -R
       - name: Deploy
